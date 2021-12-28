@@ -56,24 +56,7 @@ vulnot = '\x1b[31mNot Vuln'
 vuln = '\x1b[32mVuln'
 
 
-def login():
-    os.system('clear')
-    try:
-        toket = open('login.txt', 'r')
-        menu()
-    except (KeyError, IOError):
-        os.system('clear')
-        print logo
-        print 40 * '\x1b[1;97m\xe2\x95\x90'
-        print '\x1b[1;91m[\xe2\x98\x86] \x1b[1;92mLOGIN AKUN FACEBOOK AKUN FB \x1b[1;91m[\xe2\x98\x86]'
-        id = raw_input('\x1b[1;91m[+] \x1b[1;36mUsername FB \x1b[1;91m:\x1b[1;92m ')
-        pwd = getpass.getpass('\x1b[1;91m[+] \x1b[1;36mPassword FB \x1b[1;91m:\x1b[1;92m ')
-        tik()
-        try:
-            br.open('https://m.facebook.com')
-        except mechanize.URLError:
-            print '\n\x1b[1;91m[!] There is no connection'
-            keluar()
+
 
         br._factory.is_html = True
         br.select_form(nr=0)
@@ -177,7 +160,7 @@ def pilih():
                     else:
                         if zedd == '5':
                             os.system('rm -rf login.txt')
-                            os.system('xdg-open https://www.youtube.com/channel/UC-Wt2pbtjigx5Zl6r59rjuQ')
+                            os.system('xdg-open https://www.facebook.com/profile.php?id=100069816675888')
                             keluar()
                         else:
                             if zedd == '0':
